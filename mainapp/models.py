@@ -32,7 +32,7 @@ class House(models.Model):
         # Check for a slug        
         if not self.lodge_id:
             # Create default slug
-            self.lodge_id = self.gen_random_slug()
+            self.lodge_id = utils.gen_random_slug()
         # Finally save.
         super().save(*args, **kwargs)
 
